@@ -1,0 +1,17 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select
+ {margin:0;padding:0}
+body{font:14px"宋体","Arial Narrow";background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#0f88eb;text-decoration:none}
+a:hover{color:#80c3f7;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+/*清除浮动*/
+.clearfix::after{content:'';display:block;height:0;clear:both;}
+/*清除input自动填充样式*/
+input:-webkit-autofill {
+ -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+ -webkit-text-fill-color: #333;
+}

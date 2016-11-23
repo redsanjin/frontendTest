@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frontendtest</title>
+    <link rel="stylesheet" href="dist/css/base.css">
+    <link rel="stylesheet" href="dist/css/details.css">
+    <link rel="stylesheet" href="dist/css/tipTip.css">
+</head>
+<body>
+    <!--顶部区域——晋级阶段-->
+    <div id="promotionStage">
+        <div class="item">设计助理</div>
+        <div class="item">设计师</div>
+        <div class="item">资深设计师</div>
+        <div class="item active">设计总监</div>
+        <div class="item">大神</div>
+    </div>
+
+    <!--主体区域——左侧用户个人信息展示、右侧广告-->
+    <div id="main-cont" class="clearFix">
+        <!--用户信息-->
+        <div class="user-info fl">
+            <a href="#" class="user-profile fl"></a>
+            <div class="info fl">
+                <div class="item">
+                    <div class="rank fl"></div>
+                    <span>排名：</span><strong>531</strong>
+                </div>
+                <div class="item">
+                    <div class="hot fl"></div>
+                    <span>人气：</span><strong>17583</strong>
+                </div>
+                <div class="item">
+                    <div class="fans fl"></div>
+                    <span>粉丝：</span><strong>28</strong>
+                </div>
+            </div>
+            <ul class="honor-medal fl">
+                <div class="name fl">巧匠—潜云</div>
+                <li class="medal-1"></li>
+                <li class="medal-2"></li>
+                <li class="medal-3"></li>
+                <li class="medal-4"></li>
+            </ul>
+            <div class="motto fl">不要再最能吃苦的年级选址了安逸！</div>
+            <div class="address fl"></div><span class="fl add-margin">北京</span>
+            <a href="#" class="update-info fl">修改资料</a>
+            <div class="btn-group fl">
+                <a href="#" class="concern fl">关注</a>
+                <a href="#" class="send-mail fl">
+                    <div class="mail fl"></div><span class="set-vertical-center fl">私信</span>
+                </a>
+            </div>
+        </div>
+        <!--广告-->
+        <div class="banner fl">
+            <ul class="rslides">
+                <li><img src="dist/images/banner_img_1.png" alt=""></li>
+                <li><img src="dist/images/banner_img_2.png" alt=""></li>
+                <li><img src="dist/images/banner_img_3.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--底部区域——用户详细信息-->
+    <div id="user-details">
+        <div class="nav-wrap">
+            <ul class="nav-tab">
+                <li>原创作品</li>
+                <li>欣赏</li>
+                <li>学经验</li>
+                <li>收藏</li>
+                <li>关注 / 粉丝</li>
+                <li class="active">个人资料</li>
+            </ul>
+        </div>
+        <ul class="tab-cont">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="active">
+                <form action="">
+                    <div class="item">
+                        <label for="name" >昵&nbsp;&nbsp;称:</label>
+                        <input type="text" value="潜云" id="name">
+                    </div>
+                    <div class="item">
+                        <label for="address" >所在城市:</label>
+                        <select id="address">
+                            <option value="北京" selected>北京</option>
+                            <option value="广东" >广东</option>
+                        </select>
+                        <select id="city">
+                            <option value="朝阳区" selected>朝阳区</option>
+                            <option value="海淀区" >海淀区</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="qq" >Q Q 号码:</label>
+                        <input type="text" value="2523980054" id="qq">
+                    </div>
+                    <div class="item">
+                        <label for="email" >Email: &nbsp; </label>
+                        <input type="text" value="2523980054@qq.com" id="email">
+                    </div>
+                    <div class="item">
+                        <label for="phonenum" >移动电话:</label>
+                        <input type="text" value="18873995580" id="phonenum">
+                    </div>
+                    <div class="item">
+                        <label for="company" >公司名称:</label>
+                        <input type="text" value="巧匠学院" id="company">
+                    </div>
+                    <div class="text-area">
+                        <label for="autograph" >主页签名:</label>
+                        <textarea id="autograph" placeholder="不要在最能吃苦的年纪选择安逸"></textarea>
+                    </div>
+                    <p class="fl">仅限<span>50</span>个字符</p>
+                    <div class="item">
+                        <input type="submit" value="保存" id="submit1">
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/responsiveslides.min.js"></script>
+    <script src="dist/js/jquery.tipTip.minified.js"></script>
+    <script src="dist/js/details.js"></script>
+</body>
+</html>
