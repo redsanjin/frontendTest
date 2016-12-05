@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
+    concat = require('gulp-concat'),
     uglify = require('gulp-uglify');
 
-gulp.task('testCssmin', function () {
+gulp.task('cssMin', function () {
     gulp.src('src/css/*.css')
         .pipe(cssmin({
             advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
@@ -15,7 +16,7 @@ gulp.task('testCssmin', function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('testImagemin', function () {
+gulp.task('imagesMin', function () {
     gulp.src('src/images/*.{png,jpg,gif,ico}')
         .pipe(imagemin({
             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
@@ -24,8 +25,25 @@ gulp.task('testImagemin', function () {
 });
 
 
-gulp.task('testJsmin', function () {
-    gulp.src('src/js/details.js')
+gulp.task('jsMin', function () {
+    gulp.src('src/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('jsConcat', function () {
+    gulp.src('dist/js/*.js')
+        .pipe(concat('all.js'))//合并后的文件名
+        .pipe(gulp.dest('dist/js'));
+});
+
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+  gulp.watch('src/css/*.css', ['cssMin']);
+  gulp.watch('src/images/*.{png,jpg,gif,ico}', ['imagesMin']);
+  gulp.watch('src/js/*.js', ['jsMin']);
+  gulp.watch('dist/js/*.js', ['jsConcat']);
+});
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', ['cssMin', 'imagesMin', 'jsMin']);
